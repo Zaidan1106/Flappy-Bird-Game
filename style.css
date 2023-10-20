@@ -9,7 +9,9 @@ body {
     display: flex;
     justify-content: center;
     background: url(img/pattern.png);
-    flex-direction: column;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0 1rem;
 }
 
 .title {
@@ -29,9 +31,9 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
 .game {
@@ -39,22 +41,21 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    padding: 1rem;
     gap: 1rem;
-    border: .2rem solid white;
+    border: .2rem solid black;
     border-radius: 2rem;
     transition: all .3s;
     color: #ffa500;
     text-decoration: none;
 }
 
-.game:hover {
+.game:hover {   
     box-shadow: .2rem .2rem .2rem white;
     transition: .3s;
     transform: scale(1.05);
 }
 
 .game img {
-    width: 5rem;
-    border-radius: 5rem;
+    border-radius: 1.8rem;
+    width: 25rem;
 }
