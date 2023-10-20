@@ -11,7 +11,7 @@ body {
     background: url(img/pattern.png);
     flex-direction: column; 
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .title {
@@ -58,4 +58,16 @@ body {
 .game img {
     border-radius: 1.8rem;
     width: 25rem;
+}
+
+
+/* Mobile */
+@media (max-width: 450px) {
+    .title img {
+        width: 13rem;
+    }
+    .game img {
+        border-radius: 1.8rem;
+        width: 20rem;
+    }
 }

@@ -7,7 +7,7 @@ let sound_die = new Audio('sounds effect/die.mp3');
 // getting bird element properties
 let bird_props = bird.getBoundingClientRect();
 
-// This method returns DOMReact -> top, right, bottom, left, x, y, width and height
+// This method returns DOMRect -> top, right, bottom, left, x, y, width, and height
 let background = document.querySelector('.background').getBoundingClientRect();
 
 let score_val = document.querySelector('.score_val');
@@ -18,20 +18,38 @@ let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('messageStyle');
 
+// Fungsi untuk memulai permainan
+function startGame() {
+    document.querySelectorAll('.pipe_sprite').forEach((e) => {
+        e.remove();
+    });
+    img.style.display = 'block';
+    bird.style.top = '40vh';
+    game_state = 'Play';
+    message.innerHTML = '';
+    score_title.innerHTML = 'Score : ';
+    score_val.innerHTML = '0';
+    message.classList.remove('messageStyle');
+    play();
+}
+
 document.addEventListener('keydown', (e) => {
-    
-    if(e.key == 'Enter' && game_state != 'Play'){
-        document.querySelectorAll('.pipe_sprite').forEach((e) => {
-            e.remove();
-        });
-        img.style.display = 'block';
-        bird.style.top = '40vh';
-        game_state = 'Play';
-        message.innerHTML = '';
-        score_title.innerHTML = 'Score : ';
-        score_val.innerHTML = '0';
-        message.classList.remove('messageStyle');
-        play();
+    if ((e.key == 'Enter' && game_state != 'Play')) {
+        startGame();
+    }
+});
+
+// Event listener untuk klik mouse
+document.addEventListener('click', function() {
+    if (game_state != 'Play') {
+        startGame();
+    }
+});
+
+// Event listener untuk tap pada perangkat seluler
+document.addEventListener('touchstart', function() {
+    if (game_state != 'Play') {
+        startGame();
     }
 });
 
@@ -66,6 +84,20 @@ function play(){
         requestAnimationFrame(move);
     }
     requestAnimationFrame(move);
+
+    function handleMouseClick() {
+        if (game_state == 'Play') {
+            img.src = 'images/Bird-2.png';
+            bird_dy = -7.6;
+            img.src = 'images/Bird.png';
+        }
+    }
+
+    // Event listener untuk klik mouse
+    document.addEventListener('mousedown', handleMouseClick);
+
+    // Event listener untuk tap pada perangkat seluler
+    document.addEventListener('touchstart', handleMouseClick);
 
     let bird_dy = 0;
     function apply_gravity(){
