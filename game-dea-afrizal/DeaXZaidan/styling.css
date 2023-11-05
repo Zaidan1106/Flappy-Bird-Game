@@ -9,11 +9,12 @@ body,
   padding: .5rem;
   background-color: rgb(172, 172, 172);
   font-family: 'Poppins', sans-serif;
-  overflow-y: hidden;
+  overflow-y: hidden; 
 }
 
 #app {
   height: 100vh;
+  margin-top: 2rem;
 }
 
 .summary {
