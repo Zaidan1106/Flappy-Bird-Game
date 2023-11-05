@@ -11,22 +11,35 @@ body {
     background: url(img/pattern.png);
     flex-direction: column; 
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .title {
     text-align: center;
-    padding: 1rem;
     font-size: 1.5rem;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title img {
     width: 15rem;
 }
 
-.title small {
+.title h1 {
     font-weight: 400;
+    font-size: 1rem;
+    border: .2rem solid white;
+    background-color: antiquewhite;
+    padding: .2rem;
+    border-radius: 1rem;
+    
+}
+
+.title h1 span {
+    color: orange;
+    font-weight: 700;
 }
 
 .container {
@@ -74,7 +87,7 @@ small a {
     padding: .1rem;
     border-radius: .5rem;
     color: black;
-    font-size: .7rem;
+    font-size: .5rem;
     transition: all .3s;
 }
 
@@ -101,6 +114,6 @@ small a:hover {
         padding: .1rem;
         border-radius: .5rem;
         color: white;
-        font-size: .6rem;
+        font-size: .4rem;
     }
 }
