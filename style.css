@@ -12,6 +12,7 @@ body {
     flex-direction: column; 
     align-items: center;
     padding: 0 1rem;
+    padding-bottom: 1rem;
 }
 
 .title {
@@ -96,6 +97,31 @@ small a:hover {
     transition: all .3s;
 }
 
+a {
+    text-decoration: none;
+}
+
+.back {
+    margin-top: 2rem;
+    background-color: bisque;
+    border: .2rem solid white;
+    box-shadow: .2rem .2rem .2rem black;
+    color: black;
+    padding: .3rem;
+    border-radius: .6rem;
+    transition: all .3s;
+}
+
+.back:hover {
+    transform: scale(1.03);
+    transition: all .3s;
+    box-shadow: .25rem .25rem .25rem white;
+}
+
+.back span {
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+}
 
 
 /* Mobile */
