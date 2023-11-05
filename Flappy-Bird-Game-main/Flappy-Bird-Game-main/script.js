@@ -116,6 +116,25 @@ function play(){
             }
         });
 
+        // Tambahkan event listener untuk klik mouse
+        document.addEventListener('click', () => {
+            img.src = 'images/Bird-2.png';
+        });
+        
+        document.addEventListener('mouseup', () => {
+            img.src = 'images/Bird.png';
+        });
+        
+        // Tambahkan event listener untuk sentuhan pada perangkat mobile
+        document.addEventListener('touchstart', () => {
+            img.src = 'images/Bird-2.png';
+        });
+        
+        document.addEventListener('touchend', () => {
+            img.src = 'images/Bird.png';
+        });
+        
+
         if(bird_props.top <= 0 || bird_props.bottom >= background.bottom){
             game_state = 'End';
             message.style.left = '28vw';
