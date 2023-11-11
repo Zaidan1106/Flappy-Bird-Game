@@ -6,14 +6,42 @@ html,
 body,
 * {
   margin: 0;
+  font-family: 'Black Ops One', sans-serif;
+  color: white;
+  text-shadow: 
+  -.1rem -.1rem .1rem #000,  
+  .1rem -.1rem .1rem #000,  
+ -.1rem .1rem .1rem #000,  
+ .1rem .1rem .1rem #000;
+}
+
+body {
+  background: url(../../Logos/bg\ tutingtas.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: .5rem;
-  background-color: rgb(172, 172, 172);
-  font-family: 'Poppins', sans-serif;
-  overflow-y: hidden; 
+  height: 100vh;
+}
+
+body a {
+  color: black;
+}
+
+body a h2 {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: .2rem; 
+  background-color: bisque; 
+  border: .2rem solid rgb(104, 60, 2); 
+  padding: .3rem;
+}
+
+body a h2:hover {
+  background-color: burlywood;
 }
 
 #app {
-  height: 100vh;
   margin-top: 2rem;
 }
 
@@ -47,6 +75,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem;
 }
 
 .option {
@@ -54,7 +83,7 @@ body,
   margin: 10px 15px;
   padding: 25px;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   background-color: bisque;
   border: .2rem solid rgb(104, 60, 2);
 }
@@ -79,7 +108,52 @@ body,
   border: .2rem solid rgb(104, 60, 2);
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+footer h1 {
+  font-size: 1rem;
+}
+
+footer img {
+  width: 7rem;
+}
+
 /* Media Querries */
+@media (max-width: 765px) {
+  .summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    border: .2rem solid rgb(104, 60, 2);
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+    background-color: bisque;
+  }
+
+  .option {
+    width: 30%;
+    margin: 10px 15px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    background-color: bisque;
+    border: .2rem solid rgb(104, 60, 2);
+  }
+
+  body a h2 {
+    font-size: .7rem;
+  }
+}
+
 @media (max-width: 450px) {
   .summary {
     display: flex;
@@ -99,7 +173,7 @@ body,
     margin: 10px 15px;
     padding: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 1rem;
     background-color: bisque;
     border: .2rem solid rgb(104, 60, 2);
   }
@@ -124,7 +198,6 @@ body,
     margin: 10px 15px;
     padding: 15px;
     text-align: center;
-    font-size: 30px;
     background-color: bisque;
     border: .2rem solid rgb(104, 60, 2);
   }

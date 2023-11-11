@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TebakAngka-Zaidan's Games</title>
+
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans:wght@500;600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- Data Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Tebak Angka Game</h1>
+        <p id="message">Tebak angka antara 1 dan 10.</p>
+        <div class="erow">
+            <input type="number" id="guessInput" min="1" max="10">
+            <button onclick="changeNumber('up')">▲</button>
+            <button onclick="changeNumber('down')">▼</button>
+        </div>
+        <button onclick="checkGuess()">Submit</button>
+        <script src="script.js"></script>
+    </div>
+
+    <footer>
+        <h1>Game by: Zaidan1106</h1>
+        <a href="../index.html" class="h1"><i data-feather="home"></i>Home</a>
+        <img src="../img/logo.png" alt="">
+    </footer>
+
+    <!-- Data Feather -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

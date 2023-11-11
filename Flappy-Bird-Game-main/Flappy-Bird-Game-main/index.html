@@ -5,19 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
-    <title>ZlappyBird</title>
+    <title>ZlappyBird-Zaidan's Games</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <!-- Data Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans:wght@500;600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background"></div>
     <img src="images/Bird.png" alt="bird-img" class="bird" id="bird-1">
-    <div class="message">
-        Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
+    <div class="message" style="top: 40%;">
+        <h1 style="margin-bottom: 1rem; font-size: 2rem; background-color: greenyellow; padding: .7rem; border-radius: 1rem; box-shadow: .2rem .2rem .2rem black; cursor: pointer;">START THE GAME</h1>
+        <span style="font-size: 1rem; opacity: 0.6;">Game by Kaizhelam</span>
+        <span style="font-size: 1rem; opacity: 0.6;">Modified by: Zaidan1106</span>
+        <a href="../../index.html"><img src="../../img/logo.png" alt="" style="width: 4rem;"></a>
+        <a href="../../index.html" style="text-decoration: none; background-color: orange; color: black; padding: .2rem; box-shadow: .2rem .2rem .2rem black; border: .1rem solid black;">
+            <h3 style="font-size: 1rem; display: flex; align-items: center;"><i data-feather="home"></i>Home</h3>
+        </a>
     </div>
     <div class="score">
         <span class="score_title"></span>
         <span class="score_val"></span>
     </div>
+
+    <!-- Data Feather -->
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>

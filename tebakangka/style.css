@@ -1,0 +1,77 @@
+body {
+    font-family: 'Black Ops One';
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../Logos/bg-tebakangka.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-shadow: 
+  -.1rem -.1rem .1rem #000,  
+  .1rem -.1rem .1rem #000,  
+ -.1rem .1rem .1rem #000,  
+ .1rem .1rem .1rem #000;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    padding: 1rem;
+    border: .2rem solid white;
+    box-shadow: .2rem .2rem .2rem white;
+    border-radius: 1rem;
+}
+
+h1 {
+    color: white;
+}
+
+#message {
+    font-style: italic;
+    color: #ffffff;
+}
+
+#guessInput {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+footer h1 {
+    font-size: 1rem;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    background-color: #000;
+    color: #ffffff;
+    padding: .5rem;
+    box-shadow: .2rem .2rem .2rem white;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+footer img {
+    width: 5rem;
+}
