@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    text-shadow: 
+  -.1rem -.1rem .1rem #000,  
+  .1rem -.1rem .1rem #000,  
+ -.1rem .1rem .1rem #000,  
+ .1rem .1rem .1rem #000;
+    color: white;
+    font-family: 'Black Ops One';
+    background: url(../Logos/tictac.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    font-family: 'Black Ops One';
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow:  -.1rem -.1rem .1rem blue,  
+    .1rem -.1rem .1rem red,  
+   -.1rem .1rem .1rem red,  
+   .1rem .1rem .1rem red;
+    color: #333; /* Default text color */
+    font-family: 'Black Ops One';
+}
+
+.cell.X {
+    color: red; /* Text color for X */
+}
+
+.cell.O {
+    color: blue; /* Text color for O */
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.reset-btn {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mode-buttons {
+    margin-top: .7rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.wrap img {
+    width: 5rem;
+}
+
+.wrap a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-shadow: 
+    -.1rem -.1rem .1rem #000,  
+    .1rem -.1rem .1rem #000,  
+   -.1rem .1rem .1rem #000,  
+   .1rem .1rem .1rem #000;
+}
+
+
+/* Media Querries */
+@media (max-width: 350px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    .board {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 10px;
+    }
+}
