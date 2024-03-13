@@ -22,22 +22,30 @@
     
 </head>
 <body data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1500">
-    <div class="title">
-        <img src="img/logo.png" alt="">
+
+    <div class="music rotating" onclick="togglePlayPause()" id="mucik">
+        <img src="img/musik.png" alt="">
+    </div>
+
+    <div class="title" onmouseover="ubah()">
+        <img src="img/logo2.png" alt="" id="zaidan">
     </div>
 
     <div class="container">
-
-        <!-- Zlappy start -->
-        <div class="game-c">
-            <a href="Flappy-Bird-Game-main/Flappy-Bird-Game-main/index.html" class="game">
-                <img src="Logos/Flappy Bird.png" alt="">
+        
+        <!-- Punch A Brick Wall start -->
+        <div class="game-c" onmouseover="sound()" onclick="klik(event)">
+            <a href="#" class="game" id="gameLink">
+                <img src="Logos/PUNCH A BRICK WALL.png" alt="">
+                <div class="latest">
+                    <h1>LATEST GAME!</h1>
+                </div>
             </a>
         </div>
-        <!-- Zlappy end -->
+        <!-- Punch A Brick Wall end -->
 
         <!-- tutingtas start -->
-        <div class="game-c">
+        <div class="game-c" onmouseover="sound()">
             <a href="tutingtas/index.html" class="game">
                 <img src="img/tutingtas.png" alt="">
             </a>
@@ -45,28 +53,37 @@
         <!-- tutingtas end -->
 
         <!-- tebakangka start -->
-        <div class="game-c">
+        <div class="game-c" onmouseover="sound()">
             <a href="tebakangka/index.html" class="game">
                 <img src="Logos/TEBAK ANGKA.png" alt="">
             </a>
         </div>
         <!-- tebakangka end -->
 
-        <!-- tic tac toe start -->
-        <div class="game-c">
+         <!-- tic tac toe start -->
+         <div class="game-c" onmouseover="sound()">
             <a href="TIC-TAC-TOE/index.html" class="game">
                 <img src="Logos/TIC TAC TOE.png" alt="">
             </a>
         </div>
         <!-- tic tac toe end -->
 
+        <!-- Zlappy start -->
+        <div class="game-c" onmouseover="sound()" onclick="klik1(event)">
+            <a href="#" class="game">
+                <img src="Logos/Flappy Bird.png" alt="">
+            </a>
+        </div>
+        <!-- Zlappy end -->
+
         <!-- next game start -->
-        <div class="game-c">
+        <div class="game-c" onmouseover="sound()">
             <a href="https://forms.gle/VE7CyvsRi7jDNi7p8" class="game">
                 <img src="Logos/Next Game.png" alt="">
             </a>
         </div>
         <!-- next game end -->
+
         
     </div>
 
@@ -83,8 +100,8 @@
             <a href="https://www.youtube.com/@Zaidan1106/" target="_blank"><i data-feather="youtube"></i></a>
         </div>
     </footer>
-
-
+    
+    
     <!-- Animation AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -94,6 +111,23 @@
     <script>
         feather.replace();
     </script>
+
+
+<!-- sound -->
+<audio id="keklik">
+        <source src="sound/geometry-dash-level-selected.mp3">
+    </audio>
     
+    <audio id="mouseover">
+        <source src="sound/gta-menu.mp3">
+    </audio>
+
+    <video id="homeMusic" autoplay controls loop style="display: none;">
+        <source src="sound/bg-home-music.mp4">
+    </video>
+
+    
+
+    <script src="script.js"></script>
 </body>
 </html>

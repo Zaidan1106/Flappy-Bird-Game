@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - Punch A Brick Wall</title>
+
+    <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans:wght@500;600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+    <a href="#" onclick="klikSound2()">
+        <img src="../../img/logo.png" alt="" style="width: 6rem;">
+    </a>
+    <div class="container">
+        <div class="wrap">
+            <h1>PUNCH A BRICK WALL</h1>
+
+            <div class="tutor" style="background-color: white;">
+                <video style="width: 20rem; background-color: white; border: .2rem solid black;" autoplay controls loop>
+                    <source src="tutorr.mp4">
+                </video>
+            </div>
+
+            <p style="background-color: white;">
+                <span>PUNCH A BICK WALL</span> <br>
+                <strong style="background-color: white; text-align: left;">Cara Bermain :</strong><br>
+                1. Pilih cursor/sarung tinju kalian <br>
+                2. Pukul tembok sampai hancur <br>
+                3. Reset dengan tombol ulang <br>
+                4. Capai SCORE: 100 untuk menang
+            </p>
+
+            <a onclick="klikSound()" class="play" href="#">MAIN!</a>
+
+            <!-- audio -->
+            <audio id="clickSound">
+                <source src="../../sound/geometry-dash-level-selected.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

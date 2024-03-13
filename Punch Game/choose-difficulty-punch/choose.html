@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Difficulties - Punch A Brick Wall</title>
+
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans:wght@500;600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="choose.css">
+</head>
+<body>
+    <h1 class="bigTitle" style="text-align: center; margin: 2rem; text-wrap: wrap; color: white; text-shadow: .1rem .1rem .1rem black; font-size: 2.5rem;">Choose Your Difficulty</h1>
+    <a href="#" onclick="popSound()" id="home-btn">
+        <img src="../../img/logo.png" alt="" class="home"> 
+    </a>
+    <div class="wrap">
+        <div class="card" onclick="easy()" style="cursor: url(img/easy1.png), pointer;">
+            <img src="img/easy.png" alt="">
+            <div class="text">
+                <h1 style="color: green; text-shadow: .1rem .1rem .1rem yellow;">Easy</h1>
+                <p> 
+                    - 1 Hit tembok hancur <br>
+                    - Cocok untuk pemula <br>
+                    - Hancurkan 100 tembok <br> untuk menang
+                </p>
+            </div>
+        </div>
+        <!-- onclick="medium()" -->
+        <div class="card-1" style="cursor: url(img/medium1.png), pointer;">
+            <p class="police-line">Masih proses ceunah :)</p>
+            <p class="police-line2">Masih proses ceunah :)</p>
+            <img src="img/medium.png" alt="">
+            <div class="text">
+                <h1 style="color: orange; text-shadow: .1rem .1rem .1rem black;">Medium</h1>
+                <p> 
+                    - 2 Hit tembok hancur <br>
+                    - Cocok untuk <br>
+                    - Hancurkan 100 tembok <br> untuk menang
+                </p>
+            </div>
+        </div>
+        <!-- onclick="hard()" -->
+        <div class="card-2" style="cursor: url(img/hard1.png), pointer;">
+            <p class="police-line">Masih proses ceunah :)</p>
+            <p class="police-line2">Masih proses ceunah :)</p>
+            <img src="img/hard.png" alt="">
+            <div class="text">
+                <h1 style="color: red; text-shadow: .1rem .1rem .1rem yellow;">Hard</h1>
+                <p> 
+                    - 3 Hit tembok hancur <br>
+                    - Cocok untuk oe hantam <br>
+                    - Hancurkan 50 tembok <br> untuk menang
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="home">
+        <source src="../../sound/geometry-dash-level-selected.mp3">
+    </audio>
+
+
+    <script src="choose.js"></script>
+</body>
+</html>

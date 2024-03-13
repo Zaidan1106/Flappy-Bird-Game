@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaidan's Games - Punch A Brick Wall</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+    <!-- Animasi AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pixelify+Sans:wght@500;600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loding">
+        <img src="img/loding.gif" alt="">
+    </div>
+
+    <div class="countdown">
+        <h1 class="tiga">3</h1>
+        <h1 class="dua">2</h1>
+        <h1 class="satu">1</h1>
+        <h1 class="victory1">
+            <p>VICTORY!</p>
+            <span>menghitung score . . .</span>
+        </h1>
+        <h1 class="MULAI" style="font-size: 5rem;">START!</h1>
+    </div>
+
+    <picture>
+        <source media="(max-width: 768px )" srcset="img/finish-bg3.png">
+        <img src="img/finish-bg.png" alt="" class="finish-bg">
+    </picture>
+
+    <div class="modals-start">
+        <div class="alert-start">
+            <div class="title" style="display: flex;">
+                <h2>Punch A Brick Wall</h2>
+                <a href="#" onclick="popSound1()" id="home-btn">
+                    <img src="../../img/logo.png" alt="" class="home"> 
+                </a>
+            </div>
+            <div class="content">
+                <p>
+                    - Level Easy <br>
+                    - Hancurkan sebanyak 100 tembok untuk menang <br>
+                    - Capai target secepatnya
+                </p>
+            </div>
+            <div class="button" id="btn-start" onclick="start()">
+                <button>START!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modals-easy" id="modal1">
+        <div class="container-md" id="modal1">
+            <div class="title" id="modal1">
+                <img src="../Punch Game/choose-difficulty-punch/img/easy.png" alt="sarung" class="img-md">
+                <h1>Easy</h1>
+                <div class="scorenya">
+                    <h2>High Score:</h2>
+                    <div class="p-text">
+                        <h2>100</h2>
+                        <img src="img/bintang.png" alt="bintang">
+                    </div>
+                </div>
+            </div>
+            <div class="status" id="modal1">
+                <h1 id="success">Level Success!</h1>
+                <div class="text">
+                    <p>Score:</p>
+                    <div class="text-img">
+                        <p id="counter">0</p>
+                        <img src="../Punch Game/img/bintang.png" alt="">
+                    </div>
+                    <img src="img/zaidan-approved.png" alt="sip">
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" onclick="popSound1()" id="baten1">
+                    <button><img src="img/home-btn1.png" alt=""></button>
+                </a>
+                <a href="#" id="reset" onclick="easy()">
+                    <button><img src="img/reset-btn1.png" alt=""></button>
+                </a>
+                <a href="#" onclick="nextGame()" id="baten3">
+                    <button><img src="img/next-btn.png" alt=""></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="#" onclick="popSound1()" id="home-btn">
+            <img src="../../img/logo.png" alt="" class="home"> 
+        </a>
+        <div class="sekor">
+            <p class="score-display">SCORE: 0 </p> 
+            <div class="max">/ 100</div>
+        </div>
+        <p class="p-tips" style="text-align: center; color: white; 
+        text-shadow: 
+        .07rem .07rem 0rem black,
+        -.07rem -.07rem 0rem black,
+        .07rem -.07rem 0rem black,
+        -.07rem .07rem 0rem black;"><span style="color: yellow;">Tips:</span> Hancurkan hingga 100 tembok untuk <span style="color: green;">MENANG.</span></p>
+        <div class="wrap">
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2"></img>
+            <img id="button" src="../img/tmbk.png" alt="2" class="special"></img>
+
+            <img class="retak" src="img/retak3.png" alt="">
+            <img class="hancur" src="img/hancur.png" alt="">
+        </div>
+    </div>
+
+    <!-- audio -->
+
+    <audio id="hitung">
+        <source src="audio/count.mp3">
+    </audio>
+
+    <audio id="menangSound">
+        <source src="audio/soundVictory.mp3">
+    </audio>
+
+    <audio id="gameplay" loop>
+        <source src="audio/bg-gameplay.mp3">
+    </audio>
+
+    <audio id="start1">
+        <source src="audio/start.mp3">
+    </audio>
+
+    <audio id="retakSounnd">
+        <source src="/audio/punch.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="clickSound">
+        <source src="/Punch Game/audio/wallbreak.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>    
+
+    <audio id="popReset">
+        <source src="/Punch Game/audio/bubble-pop.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="Home">
+        <source src="../sound/geometry-dash-level-selected.mp3" type="audio/mpeg">
+    </audio>
+    <script src="pnct.js"></script>
+
+    <audio id="victory2">
+        <source src="audio/victorybedir.mp3">
+    </audio>
+
+    <audio id="victory">
+        <source src="audio/victory.mp3">
+    </audio>
+
+    <!-- Feather Icon -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</body>
+</html>
