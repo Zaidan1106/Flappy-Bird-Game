@@ -224,7 +224,7 @@ function popSound1() {
     klikin.play();
 
     klikin.onended = function() {
-        let targetHome = "../../index.html";
+        let targetHome = "../games/index.html";
         window.location.href = targetHome;
     };
 }
