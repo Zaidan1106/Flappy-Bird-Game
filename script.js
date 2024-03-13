@@ -1,5 +1,5 @@
 var ganti = document.getElementById('zaidan')
-var targetUrl = "../Punch Game/tutorial-punch/tutorial.html"; // Simpan URL tujuan di sini
+var targetUrl = "../games/Punch Game/tutorial-punch/tutorial.html"; // Simpan URL tujuan di sini
 
 function ubah() {
     ganti = document.getElementById('i')
@@ -17,7 +17,7 @@ function klik() {
 
     // When the audio finishes playing, navigate to the target URL
     klikin.onended = function() {
-        window.location.href = "../Punch Game/tutorial-punch/tutorial.html";
+        window.location.href = "../games/Punch Game/tutorial-punch/tutorial.html";
     };
 }
 
