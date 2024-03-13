@@ -236,7 +236,7 @@ function nextGame() {
     sound.play();
 
     sound.onended = function() {
-        let targetNext = "/Punch Game/choose-difficulty-punch/choose.html";
+        let targetNext = "../Punch Game/choose-difficulty-punch/choose.html";
         window.location.href = targetNext;
     };
 }
