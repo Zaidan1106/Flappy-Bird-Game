@@ -14,28 +14,28 @@
 </head>
 <body>
     <div class="container">
+        <div class="wrap">
+            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+            <a href="../index.html">Home</a>
+        </div>
         <div class="board" id="board">
             <!-- Each cell is a button -->
-            <button class="cell" onclick="handleClick(0)"></button>
-            <button class="cell" onclick="handleClick(1)"></button>
-            <button class="cell" onclick="handleClick(2)"></button>
-            <button class="cell" onclick="handleClick(3)"></button>
-            <button class="cell" onclick="handleClick(4)"></button>
-            <button class="cell" onclick="handleClick(5)"></button>
-            <button class="cell" onclick="handleClick(6)"></button>
-            <button class="cell" onclick="handleClick(7)"></button>
-            <button class="cell" onclick="handleClick(8)"></button>
+            <button class="cell" onclick="handleClick(0)" id="satu"></button>
+            <button class="cell" onclick="handleClick(1)" id="dua"></button>
+            <button class="cell" onclick="handleClick(2)" id="tiga"></button>
+            <button class="cell" onclick="handleClick(3)" id="empat"></button>
+            <button class="cell" onclick="handleClick(4)" id="lima"></button>
+            <button class="cell" onclick="handleClick(5)" id="enam"></button>
+            <button class="cell" onclick="handleClick(6)" id="tujuh"></button>
+            <button class="cell" onclick="handleClick(7)" id="delapan"></button>
+            <button class="cell" onclick="handleClick(8)" id="sembilan"></button>
+            <button class="reset-btn" onclick="resetGame()">Reset Game</button>
         </div>
         <div id="result" class="result"></div>
-        <button class="reset-btn" onclick="resetGame()">Reset Game</button>
         <div class="mode-buttons">
             <button onclick="setMode('easy')">Easy Mode</button>
             <button onclick="setMode('hard')">Hard Mode</button>
         </div>
-    </div>
-    <div class="wrap">
-        <a href="https://zaidan1106.github.io/games/"><img src="../img/logo.png" alt=""></a>
-        <a href="https://zaidan1106.github.io/games/"><i data-feather="home"></i>Home</a>
     </div>
     <script src="script.js"></script>
 

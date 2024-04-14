@@ -10,9 +10,11 @@ function handleClick(index) {
         if (checkWinner()) {
             document.getElementById('result').innerText = `${currentPlayer} wins!`;
             gameActive = false;
+            toggleResetButton(true); // Munculkan tombol reset setelah permainan selesai
         } else if (isBoardFull()) {
             document.getElementById('result').innerText = 'It\'s a draw!';
             gameActive = false;
+            toggleResetButton(true); // Munculkan tombol reset setelah permainan selesai
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             if (currentPlayer === 'O' && gameActive) {
@@ -38,10 +40,12 @@ function checkWinner() {
         [0, 4, 8], [2, 4, 6]             // Diagonals
     ];
 
-    return winPatterns.some(pattern => {
+    const winnerExists = winPatterns.some(pattern => {
         const [a, b, c] = pattern;
         return gameBoard[a] !== '' && gameBoard[a] === gameBoard[b] && gameBoard[b] === gameBoard[c];
     });
+
+    return winnerExists;
 }
 
 function isBoardFull() {
@@ -53,7 +57,8 @@ function resetGame() {
     gameActive = true;
     currentPlayer = 'X';
     document.getElementById('result').innerText = '';
-    
+    toggleResetButton(false); // Sembunyikan tombol reset saat permainan direset
+
     const cells = document.getElementById('board').children;
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = '';
@@ -79,9 +84,11 @@ function botMove() {
     if (checkWinner()) {
         document.getElementById('result').innerText = 'Bot (O) wins!';
         gameActive = false;
+        toggleResetButton(true); // Munculkan tombol reset setelah permainan selesai
     } else if (isBoardFull()) {
         document.getElementById('result').innerText = 'It\'s a draw!';
         gameActive = false;
+        toggleResetButton(true); // Munculkan tombol reset setelah permainan selesai
     } else {
         currentPlayer = 'X';
     }
@@ -101,6 +108,11 @@ function findWinningMove(player) {
     return null;
 }
 
+function toggleResetButton(show) {
+    const resetBtn = document.querySelector('.reset-btn');
+    resetBtn.style.display = show ? 'block' : 'none'; // Tampilkan tombol reset jika show true, sebaliknya sembunyikan
+}
+
 function setMode(mode) {
     currentMode = mode;
     resetGame(); // Reset permainan saat mode berubah
@@ -108,4 +120,3 @@ function setMode(mode) {
     // Tampilkan pemberitahuan/alert
     alert(`Mode has been set to ${mode.toUpperCase()}!`);
 }
-

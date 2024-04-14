@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumus Luas - Zaidan's Games</title>
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- Data Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="home-btn" href="#" onclick="klik()">
+        <img src="../img/logo.png" alt="" class="home">
+    </a>
+
+    <div class="music">
+        <img src="img/musik.png" alt="aaa" class="home1" onclick="wmusic()" id="yes">
+        <img src="img/musik-no.png" alt="" class="home2" onclick="nomusic()" id="no">
+    </div>
+
+    <div class="container">
+        <div class="title">
+            <img src="img/LOGO.png" alt="">
+        </div>
+
+        <div class="content">
+
+            <!-- Lingkaran start -->
+            <div class="shape-card">
+                <div class="img">
+                    <img src="img/lingkaran.png" alt="shape.jpg">
+                </div>
+                <div class="title-card">
+                    <h3>Lingkaran</h3>
+                    <h4>L = π x r²</h4>
+                    <img src="img/reset-btn1.png" alt="" id="resetButton" onclick="reset()" class="btn-reset">
+                </div>
+                <div class="div">
+                    <div class="rumus">
+                        <label for="radius">Masukkan r :</label>
+                        
+                        <div class="wrap">
+                            <input type="number" id="r" inputmode="numeric" placeholder="Masukkan Jari-jari" class="input-r" onclick="remove()">
+                        </div>
+
+                        <label for="radius">Pilih <span style="font-size: 1.2rem;">π</span> :</label>
+
+                        <div class="choose">
+                            <button id="desimal" onclick="pilih('desimal')" class="red"> 3,14 </button>
+                            <button id="pecahan" onclick="pilih('pecahan')" class="red1">22/7</button>
+                        </div>
+                    </div>
+                    <div class="jawaban">
+                        <button id="btn-hitung" onclick="hitung()">Hitung =</button>
+                        <textarea id="result" readonly placeholder="jawaban"></textarea>    
+                    </div>
+                </div>                
+            </div>
+            <!-- Lingkaran end -->            
+
+            <!-- Segitiga start -->
+            <div class="shape-card">
+                <div class="img">
+                    <img src="img/segitiga.png" alt="shape.jpg">
+                </div>
+                <div class="title-card">
+                    <h3>Segitiga</h3>
+                    <h4>L = 1/2 x a x t</h4>
+                    <img src="img/reset-btn1.png" alt="" id="resetButton" onclick="reset1()" class="btn-reset">
+                </div>
+                <div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan a :</label>
+                        <input type="number" id="alas" inputmode="numeric" placeholder="Masukkan Alas" class="alas" onclick="hilang()">
+                    </div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan t :</label>
+                        <input type="number" id="tinggi" inputmode="numeric" placeholder="Masukkan Tinggi" class="tinggi" onclick="hilang()">
+                    </div>
+                    <div class="jawaban">
+                        <button id="btn-hitung" onclick="hitung1()">Hitung =</button>
+                        <textarea type="text" readonly placeholder="jawaban" style="height: 4rem;" id="hasilS"></textarea>    
+                    </div>
+                </div>  
+            </div>
+            <!-- Segitiga end -->  
+
+            <!-- Persegi Panjang start -->
+            <div class="shape-card">
+                <div class="img">
+                    <img src="img/peregipanjang.png" alt="shape.jpg">
+                </div>
+                <div class="title-card">
+                    <h3>Persegi Panjang</h3>
+                    <h4>L = p x l</h4>
+                    <img src="img/reset-btn1.png" alt="" id="resetButton" onclick="reset2()" class="btn-reset">
+                </div>
+                <div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan p :</label>
+                        <input type="number" id="panjang" inputmode="numeric" placeholder="Masukkan Panjang" class="panjang" onclick="hilang4()">
+                    </div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan l :</label>
+                        <input type="number" id="lebar" inputmode="numeric" placeholder="Masukkan Lebar" class="lebar" onclick="hilang4()">
+                    </div>
+                    <div class="jawaban">
+                        <button id="btn-hitung" onclick="hitung2()">Hitung =</button>
+                        <textarea type="text" readonly placeholder="jawaban" style="height: 4rem;" id="hasilP"></textarea>      
+                    </div>
+                </div>
+            </div>
+            <!-- Persegi Panjang end -->      
+            
+            <!-- Jajargenjang start -->
+            <div class="shape-card">
+                <div class="img">
+                    <img src="img/jajargenjang.png" alt="shape.jpg">
+                </div>
+                <div class="title-card">
+                    <h3>Jajargenjang</h3>
+                    <h4>L = a x t</h4>
+                    <img src="img/reset-btn1.png" alt="" id="resetButton" onclick="reset3()" class="btn-reset">
+                </div>
+                <div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan a :</label>
+                        <input type="number" id="alasJ" inputmode="numeric" placeholder="Masukkan Alas" class="alasJ" onclick="hilang5()">
+                    </div>
+                    <div class="rumus">
+                        <label for="radius">Masukkan t :</label>
+                        <input type="number" id="tinggiJ" inputmode="numeric" placeholder="Masukkan Tinggi" class="tinggiJ" onclick="hilang5()">
+                    </div>
+                    <div class="jawaban">
+                        <button id="btn-hitung" onclick="hitung3()">Hitung =</button>
+                        <textarea type="text" readonly placeholder="jawaban" style="height: 4rem;" id="hasilJ"></textarea>      
+                    </div>
+                </div>
+            </div>
+            <!-- Jajargenjang end -->
+
+        </div>
+
+        <!-- CP -->
+        <div class="chat" onclick="muncul()">
+            <i data-feather="message-circle"></i>
+            <h2>Kirim Pesan</h2>
+        </div>
+    </div>
+
+    <!-- modal start -->
+    <!-- GForm -->
+    <div class="gform">
+        <div class="wrap-gf">
+            <img src="../Logos/RUMUS BANGUN DATAR.png" alt="">
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScC209khVjo35XqkyGxJHtEBmZByJL2632x38HBL-S6Op1YTA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Memuat…
+            </iframe>
+            
+            <div class="exit" id="exit" onclick="exit()">
+                <i data-feather="x"></i>
+            </div>
+        </div>
+    </div>    
+    <!-- modal end -->
+
+    
+
+    <!-- Audio -->
+    <audio id="keklik">
+        <source src="../sound/geometry-dash-level-selected.mp3" type="">
+    </audio>
+
+    <audio id="klik">
+        <source src="audio/klik.mp3" type="" >
+    </audio>
+
+    <audio id="gbs">
+        <source src="audio/gbs.mp3" type="" >
+    </audio>
+
+    <audio id="bnr">
+        <source src="audio/bnr.mp3" type="" >
+    </audio>
+
+    <audio id="bg-ms" autoplay loop>
+        <source src="audio/Spring (La Primavera) Op.8 No.1 E Major_ Allegro.mp3" type="" >
+    </audio>
+
+
+
+    
+
+    <script src="tugasFunction.js"></script>
+
+    <!-- Data Feather -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

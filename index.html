@@ -26,15 +26,27 @@
     <div class="music rotating" onclick="togglePlayPause()" id="mucik">
         <img src="img/musik.png" alt="">
     </div>
-
+    
     <div class="title" onmouseover="ubah()">
         <img src="img/logo2.png" alt="" id="zaidan">
     </div>
 
+    
     <div class="container">
         
+        <!-- Luas Bangun Datar start -->
+        <div class="game-c" onmouseover="sound()" onclick="klik0(event)">
+            <a href="#" class="game">
+                <img src="Logos/RUMUS BANGUN DATAR.png" alt="">
+                <div class="latest1">
+                    <h1>TOOLS / ALAT</h1>
+                </div>
+            </a>
+        </div>
+        <!-- Luas Bangun Datar end -->
+        
         <!-- Punch A Brick Wall start -->
-        <div class="game-c" onmouseover="sound()" onclick="klik(event)">
+        <div class="game-c" onmouseover="sound()" onclick="klik1(event)">
             <a href="#" class="game" id="gameLink">
                 <img src="Logos/PUNCH A BRICK WALL.png" alt="">
                 <div class="latest">
@@ -45,31 +57,33 @@
         <!-- Punch A Brick Wall end -->
 
         <!-- tutingtas start -->
-        <div class="game-c" onmouseover="sound()">
-            <a href="tutingtas/index.html" class="game">
+        <div class="game-c" onmouseover="sound()" onclick="klik2(event)">
+            <a href="#" class="game">
                 <img src="img/tutingtas.png" alt="">
             </a>
         </div>
         <!-- tutingtas end -->
-
+        
+        
         <!-- tebakangka start -->
-        <div class="game-c" onmouseover="sound()">
-            <a href="tebakangka/index.html" class="game">
+        <div class="game-c" onmouseover="sound()" onclick="klik3(event)">
+            <a href="#" class="game">
                 <img src="Logos/TEBAK ANGKA.png" alt="">
             </a>
         </div>
         <!-- tebakangka end -->
 
          <!-- tic tac toe start -->
-         <div class="game-c" onmouseover="sound()">
-            <a href="TIC-TAC-TOE/index.html" class="game">
+         <div class="game-c" onmouseover="sound()" onclick="klik4(event)">
+            <a href="#" class="game">
                 <img src="Logos/TIC TAC TOE.png" alt="">
             </a>
         </div>
         <!-- tic tac toe end -->
 
+
         <!-- Zlappy start -->
-        <div class="game-c" onmouseover="sound()" onclick="klik1(event)">
+        <div class="game-c" onmouseover="sound()" onclick="klik5(event)">
             <a href="#" class="game">
                 <img src="Logos/Flappy Bird.png" alt="">
             </a>
@@ -77,8 +91,8 @@
         <!-- Zlappy end -->
 
         <!-- next game start -->
-        <div class="game-c" onmouseover="sound()">
-            <a href="https://forms.gle/VE7CyvsRi7jDNi7p8" class="game">
+        <div class="game-c" onmouseover="sound()" onclick="muncul()">
+            <a href="#" class="game">
                 <img src="Logos/Next Game.png" alt="">
             </a>
         </div>
@@ -86,6 +100,21 @@
 
         
     </div>
+
+    <!-- modal start -->
+    <!-- GForm -->
+    <div class="gform">
+        <div class="wrap-gf">
+            <img src="Logos/Next Game.png" alt="">
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqcnixzISYxmuwhyaysYBwXQmP9OxcjSoVcDjq4UmS-CtVRw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+            
+            <div class="exit" id="exit" onclick="exit()">
+                <i data-feather="x"></i>
+            </div>
+        </div>
+    </div>    
+    <!-- modal end -->
 
     <a href="https://zaidan1106.github.io/" target="_blank">
         <div class="back">
@@ -113,8 +142,8 @@
     </script>
 
 
-<!-- sound -->
-<audio id="keklik">
+    <!-- sound -->
+    <audio id="keklik">
         <source src="sound/geometry-dash-level-selected.mp3">
     </audio>
     
@@ -126,7 +155,22 @@
         <source src="sound/bg-home-music.mp4">
     </video>
 
-    
+    <!-- Audio -->
+    <audio id="keklik">
+        <source src="sound/geometry-dash-level-selected.mp3" type="">
+    </audio>
+
+    <audio id="klik">
+        <source src="luas-bangun-datar/audio/klik.mp3" type="" >
+    </audio>
+
+    <audio id="gbs">
+        <source src="luas-bangun-datar/audio/gbs.mp3" type="" >
+    </audio>
+
+    <audio id="bnr">
+        <source src="luas-bangun-datar/audio/bnr.mp3" type="" >
+    </audio>
 
     <script src="script.js"></script>
 </body>

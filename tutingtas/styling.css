@@ -16,14 +16,23 @@ body,
 }
 
 body {
-  background: url(../Logos/bg-tutingtas.png);
+  background-image: url(../Logos/bg-tutingtas.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: .5rem;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  padding: 1rem;
 }
 
 body a {
   color: black;
+  position: absolute;
+  top: 5%;
+  left: 1%;
 }
 
 body a h2 {
