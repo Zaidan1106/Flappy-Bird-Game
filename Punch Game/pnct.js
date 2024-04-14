@@ -101,6 +101,7 @@ function showModal() {
             successEasy.style.display = 'block';
             successEasy.style.opacity = '0';
             successEasy.style.transform = 'translateY(100px)'; // Geser elemen ke bawah sejauh 100px
+            munculButton();
 
             // Menjalankan animasi GSAP untuk mengubah opasitas, posisi, dan menggeser elemen dari bawah ke atas
             gsap.to("#success", {
@@ -143,10 +144,9 @@ function showModal() {
                 // Mulai pemutaran audio dan perhitungan saat fungsi dipanggil
                 audio.play();
     
-                audio.addEventListener('ended', function() {
-                    // Panggil fungsi hitung() untuk memulai perhitungan
-                    munculButton();
-                });
+                
+                // Panggil fungsi hitung() untuk memulai perhitungan
+                
         }, 3500)
     });
 }
