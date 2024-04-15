@@ -5,6 +5,7 @@ var targetTuting = "tutingtas/index.html"; // Simpan URL tujuan di sini
 var targetAngka = "tebakangka/index.html"; // Simpan URL tujuan di sini
 var targetXox = "TIC-TAC-TOE/index.html"; // Simpan URL tujuan di sini
 var targetNext = "https://forms.gle/VE7CyvsRi7jDNi7p8"; // Simpan URL tujuan di sini
+let saweria = "https://saweria.co/Zaidan1106"
 
 function ubah() {
     ganti = document.getElementById('i')
@@ -83,6 +84,16 @@ function klik6() {
     // When the audio finishes playing, navigate to the target URL
     klikin.onended = function() {
         window.location.href = targetNext;
+    };
+}
+
+function sawer() {
+    const klikin = document.getElementById('keklik');
+    klikin.play();
+
+    // When the audio finishes playing, navigate to the target URL
+    klikin.onended = function() {
+        window.location.href = saweria;
     };
 }
 

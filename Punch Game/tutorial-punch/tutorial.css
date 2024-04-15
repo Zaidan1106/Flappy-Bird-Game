@@ -5,6 +5,7 @@
     font-family: 'Black Ops One', sans-serif;
     background-color: #6c7ab0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {

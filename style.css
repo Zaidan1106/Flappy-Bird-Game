@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -193,6 +194,7 @@ small a:hover {
 a {
     text-decoration: none;
 }
+
 
 .back {
     margin-top: 2rem;

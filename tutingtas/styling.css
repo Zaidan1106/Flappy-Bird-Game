@@ -13,6 +13,7 @@ body,
   .1rem -.1rem .1rem #000,  
  -.1rem .1rem .1rem #000,  
  .1rem .1rem .1rem #000;
+ scroll-behavior: smooth;
 }
 
 body {
