@@ -432,7 +432,74 @@ button:hover, #reset:hover {
     -webkit-animation: bounce 0.1s ease;
 }
 
+/* progress */
+.proggress::after {
+    content: '';
+    display: block;
+    width: 28rem;
+    position: relative;
+    background-color: antiquewhite;
+    padding-bottom: 0.5rem;
+    transition: .3s linear;
+}
 
+.proggress p {
+    color: greenyellow;
+    text-shadow: 
+    .1rem .1rem 0rem black,
+    -.1rem -.1rem 0rem black,
+    .1rem -.1rem 0rem black,
+    -.1rem .1rem 0rem black;
+    transition: .3s linear;
+}
+
+.proggress p::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 2;
+    width: 0rem;
+    background-color: green;
+    padding-bottom: 0.5rem;
+    transition: .3s linear;
+}
+
+.proggress p.width-2rem::after {
+    width: 2rem;
+}
+.proggress p.width-4rem::after {
+    width: 4rem;
+}
+.proggress p.width-6rem::after {
+    width: 6rem;
+}
+.proggress p.width-8rem::after {
+    width: 8rem;
+}
+.proggress p.width-10rem::after {
+    width: 10rem;
+}
+.proggress p.width-12rem::after {
+    width: 12rem;
+}
+.proggress p.width-14rem::after {
+    width: 14rem;
+}
+.proggress p.width-16rem::after {
+    width: 16rem;
+}
+.proggress p.width-18rem::after {
+    width: 18rem;
+}
+.proggress p.width-20rem::after {
+    width: 20rem;
+}
+.proggress p.width-22rem::after {
+    width: 22rem;
+}
+.proggress p.width-28rem::after {
+    width: 28rem;
+}
 
 button {
     text-align: center;
@@ -468,6 +535,10 @@ img:hover {
 }
 
 @media (max-width: 768px) {
+    .container {
+        gap: 0rem;
+    }
+
     .container .wrap {
         display: grid;
         grid-template-columns: repeat(2, 100fr);
@@ -506,6 +577,54 @@ img:hover {
 
     .countdown .victory1 {
         font-size: 4rem;
+    }
+
+    /* progress */
+    .proggress::after {
+        content: '';
+        display: block;
+        width: 18rem;
+        background-color: antiquewhite;
+        padding-bottom: 0.5rem;
+        transition: .3s linear;
+        margin-bottom: 1rem;
+    }
+
+    .proggress p.width-2rem::after {
+        width: 2rem;
+    }
+    .proggress p.width-4rem::after {
+        width: 3rem;
+    }
+    .proggress p.width-6rem::after {
+        width: 4rem;
+    }
+    .proggress p.width-8rem::after {
+        width: 6rem;
+    }
+    .proggress p.width-10rem::after {
+        width: 8rem;
+    }
+    .proggress p.width-12rem::after {
+        width: 9rem;
+    }
+    .proggress p.width-14rem::after {
+        width: 10rem;
+    }
+    .proggress p.width-16rem::after {
+        width: 11rem;
+    }
+    .proggress p.width-18rem::after {
+        width: 12rem;
+    }
+    .proggress p.width-20rem::after {
+        width: 13rem;
+    }
+    .proggress p.width-22rem::after {
+        width: 14rem;
+    }
+    .proggress p.width-28rem::after {
+        width: 18rem;
     }
 }
 

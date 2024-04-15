@@ -14,6 +14,13 @@ let score = 0; // Inisialisasi skor awal
 modalEasy.style.display = 'none';
 successEasy.style.display = 'none';
 
+//troubleshooting aja
+// let p = document.querySelector('.modals-start')
+// p.style.display = 'none'
+
+// scoreDisplay.textContent = 'SCORE: 8'
+//troubleshooting aja
+
 // Atur jumlah tombol yang dibutuhkan untuk menampilkan tombol reset
 let requiredButtonClicks = window.innerWidth > 768 ? 9 : 8;
 
@@ -23,6 +30,8 @@ function resetGame() {
     buttons.forEach(button => {
         button.src = "../img/tmbk.png";
         button.classList.remove('clicked'); // Menghapus kelas 'clicked' dari semua tombol
+        
+        // if (scoreDisplay === )
     });
 
     // Mainkan suara reset
@@ -204,6 +213,165 @@ buttons.forEach(button => {
                 // Tampilkan modal
                 showModal();
             }
+
+            // Check if score reaches 8
+            function updateProgress() {
+                if (score === 8) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-2rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '8%'
+                    sound.play()
+                }
+            }
+            
+            updateProgress();
+
+            function updateProgress1() {
+                if (score === 16) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-4rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '16%'
+                    sound.play()
+                }
+            }
+            updateProgress1();
+
+            function updateProgress2() {
+                if (score === 24) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-6rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '24%'
+                    sound.play()
+                }
+            }
+            updateProgress2();
+
+            function updateProgress3() {
+                if (score === 32) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-8rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '32%'
+                    sound.play()
+                }
+            }
+            updateProgress3();
+
+            function updateProgress4() {
+                if (score === 40) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-10rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '40%'
+                    sound.play()
+                }
+            }
+            updateProgress4();
+
+            function updateProgress5() {
+                if (score === 48) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-12rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '48%'
+                    sound.play()
+                }
+            }
+            updateProgress5();
+
+            function updateProgress6() {
+                if (score === 56) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-14rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '56%'
+                    sound.play()
+                }
+            }
+            updateProgress6();
+
+            function updateProgress7() {
+                if (score === 64) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-16rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '64%'
+                    sound.play()
+                }
+            }
+            updateProgress7();
+
+            function updateProgress8() {
+                if (score === 72) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-18rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '72%'
+                    sound.play()
+                }
+            }
+            updateProgress8();
+
+            function updateProgress9() {
+                if (score === 80) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-20rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '80%'
+                    sound.play()
+                }
+            }
+            updateProgress9();
+
+            function updateProgress10() {
+                if (score === 88) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-22rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '88%'
+                    sound.play()
+                }
+            }
+            updateProgress10();
+
+            function updateProgress11() {
+                if (score === 100) {
+                    let proggressP = document.querySelector('.proggress p');
+                    let textP = document.querySelector('.proggress p')
+                    let sound = document.getElementById('correct')
+                    proggressP.classList.add('width-28rem'); // Tambahkan kelas untuk mengatur lebar
+                    console.log('hai'); // Menampilkan 'hai' di konsol jika skor mencapai 8
+                    textP.textContent = '100%'
+                    sound.play()
+                }
+            }
+            updateProgress11();
+
         }
 
         // Reset semua tombol jika semua tombol sudah diklik
@@ -212,6 +380,7 @@ buttons.forEach(button => {
         }
     });    
 }); 
+
 
 // Menambahkan event listener untuk tombol reset
 resetBtn.addEventListener('click', function() {
