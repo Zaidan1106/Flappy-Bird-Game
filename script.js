@@ -100,6 +100,7 @@ function sawer() {
 let audio = document.getElementById('homeMusic')
 let music = document.getElementById('mucik')
 
+
 function togglePlayPause() {
     if (audio.paused) {
         audio.play();
