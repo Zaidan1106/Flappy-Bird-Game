@@ -93,7 +93,7 @@ function showModal() {
 
 
     // Setelah suara menang selesai diputar
-    menangSound.addEventListener('ended', function() {
+    setTimeout(function() {
         // Menyembunyikan countdown dan victory1
         countDown.style.display = 'none';
         menang.style.display = 'none';
@@ -126,39 +126,41 @@ function showModal() {
         // Fungsi untuk memulai perhitungan
         setTimeout(function() {
             const counter = document.getElementById('counter');
-                const audio = document.getElementById('hitung');
-                let count = 0;
-    
-                // Fungsi untuk mengubah nilai counter dari 0 hingga 100 dalam durasi audio
-                function incrementCounter() {
-                    if (count <= 100) {
-                        counter.textContent = count;
-                        count++;
-                        setTimeout(incrementCounter, interval); // Ubah nilai setiap interval yang dihitung
-                    }
+            const audio = document.getElementById('hitung');
+            let count = 0;
+
+            // Fungsi untuk mengubah nilai counter dari 0 hingga 100 dalam durasi audio
+            function incrementCounter() {
+                if (count <= 100) {
+                    counter.textContent = count;
+                    count++;
+                    setTimeout(incrementCounter, interval); // Ubah nilai setiap interval yang dihitung
                 }
-    
-                // Mulai perhitungan setelah audio selesai diputar
-                audio.addEventListener('play', function() {
-                    incrementCounter();
-                });
-    
-                // Dapatkan durasi audio
-                const duration = audio.duration;
-    
-                // Hitung jumlah langkah (count) untuk mencapai 100 dalam durasi audio
-                const steps = 100;
-                const interval = duration / steps * 1000; // Konversi ke milidetik
-    
-                // Mulai pemutaran audio dan perhitungan saat fungsi dipanggil
-                audio.play();
-    
-                
-                // Panggil fungsi hitung() untuk memulai perhitungan
-                
+            }
+
+            // Mulai perhitungan setelah audio selesai diputar
+            audio.addEventListener('play', function() {
+                incrementCounter();
+            });
+
+            // Dapatkan durasi audio
+            const duration = audio.duration;
+
+            // Hitung jumlah langkah (count) untuk mencapai 100 dalam durasi audio
+            const steps = 100;
+            const interval = duration / steps * 1000; // Konversi ke milidetik
+
+            // Mulai pemutaran audio dan perhitungan saat fungsi dipanggil
+            audio.play();
+
+
+            // Panggil fungsi hitung() untuk memulai perhitungan
+
         }, 3500)
-    });
+    }, 5500);
 }
+
+
 
 
 const baten1 = document.getElementById('baten1')
