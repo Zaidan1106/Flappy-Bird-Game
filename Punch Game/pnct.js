@@ -14,12 +14,9 @@ let score = 0; // Inisialisasi skor awal
 modalEasy.style.display = 'none';
 successEasy.style.display = 'none';
 
-//troubleshooting aja
+// troubleshooting aja
 // let p = document.querySelector('.modals-start')
 // p.style.display = 'none'
-
-// scoreDisplay.textContent = 'SCORE: 8'
-//troubleshooting aja
 
 // Atur jumlah tombol yang dibutuhkan untuk menampilkan tombol reset
 let requiredButtonClicks = window.innerWidth > 768 ? 9 : 8;
@@ -417,43 +414,105 @@ let tiga = document.querySelector('.tiga')
 let dua = document.querySelector('.dua')
 let satu = document.querySelector('.satu')
 let mulai = document.querySelector('.MULAI')
+let player = document.querySelector('.nama-player')
 
 function start() {
-    const bgMusik = document.getElementById('gameplay')
-    const setart = document.getElementById('popReset')
-    setart.play()
-    bgMusik.play()
-    start1.play();
-    modalCd.style.display = "flex";
-    let modalStart = document.querySelector('.modals-start')
-        let startBtn = document.querySelector('.alert-start');
-        // gsap.to(".modals-start", {duration: 1, opacity: 0, scale: 0.5, delay: 0});
-        modalStart.style.display = 'none';
-        startBtn.style.display = 'none';
 
-    setTimeout(function() {
-        tiga.style.display = "flex";
-    }, 500);
 
-    setTimeout(function() {
-        tiga.style.display = 'none';
-        dua.style.display = "flex";
-    }, 1500);
+    if (player.value === '' || player === null) {
+        let gbs = document.getElementById('gbs')
 
-    setTimeout(function() {
-        dua.style.display = "none";
-        satu.style.display = "flex";
-    }, 2500);
+        gbs.play()
+        player.classList.add('active')
+    } else {
+        let namaPlayer = document.getElementById('nama-player').value;
+        let playerBox = document.getElementById('player-box');
+        let playerBox2 = document.getElementById('player-box2');
+        
+        console.log(namaPlayer);    
+        playerBox.textContent = namaPlayer
+        playerBox2.textContent = namaPlayer
 
-    setTimeout(function() {
-        satu.style.display = "none";
-        mulai.style.display = "flex";
-    }, 3500);
 
-    start1.onended = function() {
-        modalCd.style.display = "none";
-        mulai.style.display = 'none'
+        const bgMusik = document.getElementById('gameplay')
+        const setart = document.getElementById('popReset')
+        setart.play()
+        bgMusik.play()
+        start1.play();
+        modalCd.style.display = "flex";
+        let modalStart = document.querySelector('.modals-start')
+            let startBtn = document.querySelector('.alert-start');
+            // gsap.to(".modals-start", {duration: 1, opacity: 0, scale: 0.5, delay: 0});
+            modalStart.style.display = 'none';
+            startBtn.style.display = 'none';
+    
+        setTimeout(function() {
+            tiga.style.display = "flex";
+        }, 500);
+    
+        setTimeout(function() {
+            tiga.style.display = 'none';
+            dua.style.display = "flex";
+        }, 1500);
+    
+        setTimeout(function() {
+            dua.style.display = "none";
+            satu.style.display = "flex";
+        }, 2500);
+    
+        setTimeout(function() {
+            satu.style.display = "none";
+            mulai.style.display = "flex";
+        }, 3500);
+    
+        start1.onended = function() {
+            modalCd.style.display = "none";
+            mulai.style.display = 'none'
+    
+           // Ambil elemen untuk menampilkan waktu
+            const timerElement = document.getElementById('timer');
+    
+            // Set waktu awal
+            let seconds = 0;
+            let minutes = 0;
+    
+            // Jalankan perhitungan waktu setiap detik
+            const timerInterval = setInterval(function() {
+                // Tambah satu detik
+                seconds++;
+    
+                // Jika sudah mencapai 60 detik, tambahkan satu menit dan reset detik menjadi 0
+                if (seconds >= 60) {
+                    seconds = 0;
+                    minutes++;
+                }
+    
+                // Format waktu menjadi MM:SS
+                const formattedTime = (minutes < 10 ? '0' : '') + minutes + ' : ' + (seconds < 10 ? '0' : '') + seconds;
+    
+                // Tampilkan waktu di dalam elemen
+                timerElement.textContent = formattedTime;
+    
+                // Hentikan perhitungan waktu jika mencapai kondisi tertentu, misalnya jika score mencapai 100
+                if (score === 100) {
+                    clearInterval(timerInterval); // Hentikan perhitungan waktu
+                    // Tambahkan logika atau tampilkan modal di sini
+                    
+                    // Ambil waktu terakhir yang terhitung
+                    const lastTime = formattedTime;
+    
+                    // Tampilkan waktu terakhir di elemen #time-result
+                    timer.classList.add('active')
+                    let ts = document.getElementById('time-result');
+                    ts.textContent = lastTime;
+                }
+            }, 1000); // Jalankan setiap 1 detik
+        }
     };
+}
+
+function hilang() {
+    player.classList.remove('active')
 }
 
 let targetEasy = "../Punch Game/game-pencet.html"

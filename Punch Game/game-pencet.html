@@ -50,15 +50,23 @@
                     <img src="../img/logo.png" alt="" class="home"> 
                 </a>
             </div>
-            <div class="content">
+            <div class="content" style="display: flex; flex-direction: column;">
                 <p>
                     - Level Easy <br>
                     - Hancurkan sebanyak 100 tembok untuk menang <br>
                     - Capai target secepatnya
                 </p>
+                <form action="" style="margin-top: 1rem; color: greenyellow; text-shadow: 
+                .1rem .1rem 0rem black,
+                -.1rem -.1rem 0rem black,
+                .1rem -.1rem 0rem black,
+                -.1rem .1rem 0rem black;">
+                    <label for="">Nama Player</label>
+                    <input type="text" placeholder="Masukkan Nama" id="nama-player" class="nama-player" onclick="hilang()">
+                </form>
             </div>
             <div class="button" id="btn-start" onclick="start()">
-                <button>START!</button>
+                <button type="submit">START!</button>
             </div>
         </div>
     </div>
@@ -78,11 +86,19 @@
             </div>
             <div class="status" id="modal1">
                 <h1 id="success">Level Success!</h1>
+                <p class="player">Done by <span id="player-box2" style="color: yellow;"></span></p>
                 <div class="text">
-                    <p>Score:</p>
-                    <div class="text-img">
-                        <p id="counter">0</p>
-                        <img src="../Punch Game/img/bintang.png" alt="">
+                    <div class="wrap-ez" style="display: flex; justify-content: baseline; align-items: center; gap: 1rem;">
+                        <p>Score :</p>
+                        <div class="text-img">
+                            <p id="counter">0</p>
+                            <img src="../Punch Game/img/bintang.png" alt="">
+                        </div>
+                    </div>
+                    <div class="time-rs">
+                        <p>Time : <span id="time-result" style=" background-color: greenyellow;
+                        color: black; padding: .2rem; 
+                        border-radius: .2rem; text-shadow: none;"></span></p>
                     </div>
                     <img src="img/zaidan-approved.png" alt="sip">
                 </div>
@@ -105,9 +121,14 @@
         <a href="#" onclick="popSound1()" id="home-btn">
             <img src="../img/logo.png" alt="" class="home"> 
         </a>
-        <div class="sekor">
-            <p class="score-display">SCORE: 0 </p> 
-            <div class="max">/ 100</div>
+        <div class="wrap-ct" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem;">
+            <div class="sekor">
+                <p class="score-display">SCORE: 0 </p> 
+                <div class="max">/ 100</div>
+            </div>
+            <div class="wktu">
+                <p id="timer" class="timer">00 : 00</p>
+            </div>
         </div>
         <p class="p-tips" style="text-align: center; color: white; 
         text-shadow: 
@@ -129,10 +150,13 @@
             <img id="button" src="../img/tmbk.png" alt="2"></img>
             <img id="button" src="../img/tmbk.png" alt="2" class="special"></img>
 
+            <p id="player-box1">Player : <span id="player-box"></span></p>
             <img class="retak" src="img/retak3.png" alt="">
             <img class="hancur" src="img/hancur.png" alt="">
         </div>
     </div>
+
+    
 
     <!-- audio -->
 
@@ -176,6 +200,10 @@
 
     <audio id="correct">
         <source src="../luas-bangun-datar/audio/bnr.mp3" type="">
+    </audio>
+
+    <audio id="gbs">
+        <source src="../luas-bangun-datar/audio/gbs.mp3" type="" >
     </audio>
 
     <!-- Feather Icon -->

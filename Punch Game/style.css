@@ -187,7 +187,7 @@ button:hover, #reset:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .container a {
@@ -221,6 +221,24 @@ button:hover, #reset:hover {
     gap: .6rem;
     cursor: url(choose-difficulty-punch/img/easy1.png), pointer; 
     position: relative;
+}
+
+.container .wrap p {
+    position: absolute;
+    font-size: .8rem;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: greenyellow;
+    text-shadow: .1rem .1rem 0rem black,
+    -.1rem -.1rem 0rem black,
+    .1rem -.1rem 0rem black,
+    -.1rem .1rem 0rem black;
+    cursor: text;
+}
+
+.container .wrap p span {
+    color: yellow;
 }
 
 .finish-bg {
@@ -349,6 +367,7 @@ button:hover, #reset:hover {
     text-align: center;
     font-size: 1.6rem;
     padding: 1rem 0;
+    padding-bottom: .3rem;
     color: white;
     text-shadow: 
     .1rem .1rem 0rem black,
@@ -422,6 +441,21 @@ button:hover, #reset:hover {
     box-shadow: none;
 }
 
+/* timer */
+.timer {
+    transition: all .3s;
+    background-color: rgba(0, 0, 0, 0.437); 
+    color: aliceblue; 
+    padding: .2rem; 
+    border-radius: .2rem;
+}
+
+.timer.active {
+    transition: all .3s;
+    background-color: greenyellow;
+    color: black;
+}
+
 @keyframes bounce {
     0% { transform: scale(1); } /* Ukuran semula */
     50% { transform: scale(0.9); -webkit-transform: scale(0.9); -moz-transform: scale(0.9); -ms-transform: scale(0.9); -o-transform: scale(0.9); } /* Ukuran lebih besar */
@@ -433,6 +467,31 @@ button:hover, #reset:hover {
     -webkit-animation: bounce 0.1s ease;
 }
 
+/* player */
+.player {
+    font-size: 1rem;
+    text-align: center;
+    color: greenyellow;
+    text-shadow: 
+    .1rem .1rem 0rem black,
+    -.1rem -.1rem 0rem black,
+    .1rem -.1rem 0rem black,
+    -.1rem .1rem 0rem black;
+}
+
+.nama-player {
+    background-color: none;
+    border: .2rem solid black;
+    border-radius: .5rem;
+    padding: .3rem;
+    transition: all .3s;
+}
+
+.nama-player.active {
+    transition: all .3s;
+    box-shadow: 0rem 0rem .5rem 4px red;
+}
+
 /* progress */
 .proggress::after {
     content: '';
@@ -442,6 +501,7 @@ button:hover, #reset:hover {
     background-color: antiquewhite;
     padding-bottom: 0.5rem;
     transition: .3s linear;
+    margin-bottom: .5rem;
 }
 
 .proggress p {
@@ -549,7 +609,7 @@ img:hover {
 
     .container a {
         align-self: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .special {
@@ -626,6 +686,19 @@ img:hover {
     }
     .proggress p.width-28rem::after {
         width: 18rem;
+    }
+
+    .container .wrap p {
+        position: absolute;
+        font-size: .6rem;
+        top: -2.2rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: greenyellow;
+        text-shadow: .1rem .1rem 0rem black,
+        -.1rem -.1rem 0rem black,
+        .1rem -.1rem 0rem black,
+        -.1rem .1rem 0rem black;
     }
 }
 
