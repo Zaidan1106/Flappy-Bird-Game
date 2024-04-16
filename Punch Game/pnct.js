@@ -182,6 +182,17 @@ function munculButton() {
 }
 
 
+function hilang1() {
+    let wrap = document.querySelector('.wrap-gg')
+    let frm = document.querySelector('.forum')
+    let pop = document.querySelector('#popReset')
+
+    pop.play()
+    wrap.classList.remove('active')
+    frm.classList.remove('active')
+
+    showModal();
+}
 
 // Loop melalui setiap tombol dan menambahkan event listener
 buttons.forEach(button => {
@@ -206,11 +217,16 @@ buttons.forEach(button => {
             if (score === 100) {
                 // Hentikan musik latar
                 const bgMusik = document.getElementById('gameplay');
+                const vic = document.getElementById('victory')
+                let wrap = document.querySelector('.wrap-gg')
+                let frm = document.querySelector('.forum')
+                
                 bgMusik.pause();
                 bgMusik.currentTime = 0; // Mengembalikan ke awal untuk memulai kembali dari awal saat dimainkan lagi
-            
+                vic.play();
+                wrap.classList.add('active')
+                frm.classList.add('active')
                 // Tampilkan modal
-                showModal();
             }
 
             // Check if score reaches 8
@@ -428,10 +444,12 @@ function start() {
         let namaPlayer = document.getElementById('nama-player').value;
         let playerBox = document.getElementById('player-box');
         let playerBox2 = document.getElementById('player-box2');
+        let namaS = document.getElementById('namaS');
         
         console.log(namaPlayer);    
         playerBox.textContent = namaPlayer
         playerBox2.textContent = namaPlayer
+        namaS.value = namaPlayer
 
 
         const bgMusik = document.getElementById('gameplay')
@@ -500,11 +518,14 @@ function start() {
                     
                     // Ambil waktu terakhir yang terhitung
                     const lastTime = formattedTime;
+                    let timeS = document.getElementById('timeS')
+                    let timer = document.getElementById('timer')
     
                     // Tampilkan waktu terakhir di elemen #time-result
                     timer.classList.add('active')
                     let ts = document.getElementById('time-result');
                     ts.textContent = lastTime;
+                    timeS.value = lastTime;
                 }
             }, 1000); // Jalankan setiap 1 detik
         }

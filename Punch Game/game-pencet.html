@@ -46,7 +46,7 @@
         <div class="alert-start">
             <div class="title" style="display: flex;">
                 <h2>Punch A Brick Wall</h2>
-                <a href="#" onclick="popSound1()" id="home-btn">
+                <a id="home-btn">
                     <img src="../img/logo.png" alt="" class="home"> 
                 </a>
             </div>
@@ -66,7 +66,7 @@
                 </form>
             </div>
             <div class="button" id="btn-start" onclick="start()">
-                <button type="submit">START!</button>
+                <button>START!</button>
             </div>
         </div>
     </div>
@@ -154,6 +154,22 @@
             <img class="retak" src="img/retak3.png" alt="">
             <img class="hancur" src="img/hancur.png" alt="">
         </div>
+
+
+         <!-- Leaderboard PABW -->
+        <div class="wrap-gg">
+            <form name="Leaderboard-PABW" class="forum" id="forum">
+                <div class="wrapFF">
+                    <h1>You Win!</h1>
+                    <img src="../Punch Game/choose-difficulty-punch/img/easy.png" alt="">
+                </div>
+                <label for="">Nama</label>
+                <input name="name" type="text" placeholder="Nama" id="namaS">
+                <label for="">Waktu</label>
+                <input name="time" type="text" placeholder="Time" id="timeS">
+                <button type="submit" onclick="hilang1()">Continue...</button>
+            </form>
+        </div>
     </div>
 
     
@@ -205,6 +221,22 @@
     <audio id="gbs">
         <source src="../luas-bangun-datar/audio/gbs.mp3" type="" >
     </audio>
+
+   
+    
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwREH1IQs_amIdvhEAnhOY6dgU_1UhwAmoMOPK1_C6cHEFcmRfZX_LzctI7VGZSo4IIFg/exec'
+        const form = document.forms['Leaderboard-PABW']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <!-- Leaderboard PABW -->
 
     <!-- Feather Icon -->
     <script>
