@@ -468,6 +468,10 @@ button:hover, #reset:hover {
     -webkit-animation: bounce 0.1s ease;
 }
 
+#button::selection {
+    background-color: #ffffff00; /* Ganti dengan warna latar belakang yang Anda inginkan */
+}
+
 /* player */
 .player {
     font-size: 1rem;
