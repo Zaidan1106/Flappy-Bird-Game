@@ -370,6 +370,7 @@ function togglePlayPause() {
         audio.pause();
         klikk.play();
         img.src = 'img/pause.png';
+        music.classList.remove("rotating"); // Menambahkan kelas untuk memulai animasi
     }
 }
 
