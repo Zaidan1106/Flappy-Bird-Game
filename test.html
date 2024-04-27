@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typed Text with Blinking Cursor</title>
+<style>
+/* Animasi garis berkedip */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Gaya untuk elemen teks yang diketik */
+.typed-text-container {
+    position: relative;
+    font-size: 24px;
+}
+
+/* Gaya untuk garis berkedip */
+.blinking-cursor {
+    position: absolute;
+    bottom: -3px;
+    right: -2px; /* Sesuaikan posisi agar berada di sebelah kanan huruf terakhir */
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+}
+
+/* Gaya untuk teks yang diketik */
+.typed-text {
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+</head>
+<body>
+
+<!-- Container untuk teks yang diketik -->
+<div class="typed-text-container">
+    <!-- Teks yang diketik -->
+    <span class="typed-text" id="typed-text"></span>
+    <!-- Garis berkedip -->
+    <div class="blinking-cursor"></div>
+</div>
+
+<script>
+// Teks yang akan ditampilkan dengan animasi ketik
+var textToType = "Teks yang ingin Anda ketikkan secara animasi.";
+
+// Fungsi untuk menampilkan teks secara animasi
+function typeWriter(text, i, cb) {
+    if (i < text.length) {
+        document.getElementById("typed-text").innerHTML += text.charAt(i);
+        i++;
+        // Geser posisi garis berkedip agar selalu berada di sebelah kanan huruf terakhir
+        var cursor = document.querySelector('.blinking-cursor');
+        var textElement = document.getElementById('typed-text');
+        cursor.style.top = textElement.offsetTop + 'px';
+        cursor.style.left = textElement.offsetWidth + textElement.offsetLeft - 2 + 'px';
+        setTimeout(function() {
+            typeWriter(text, i, cb);
+        }, 50); // Kecepatan ketik (dalam milidetik)
+    } else {
+        setTimeout(function() {
+            deleteText(cb); // Setelah mengetik selesai, hapus teks
+        }, 2000); // Jeda 2 detik sebelum menghapus teks
+    }
+}
+
+// Fungsi untuk menghapus teks secara animasi
+function deleteText(cb) {
+    var text = document.getElementById("typed-text").innerHTML;
+    var length = text.length;
+    if (length > 0) {
+        text = text.slice(0, -1);
+        document.getElementById("typed-text").innerHTML = text;
+        // Geser posisi garis berkedip agar selalu berada di sebelah kanan huruf terakhir
+        var cursor = document.querySelector('.blinking-cursor');
+        var textElement = document.getElementById('typed-text');
+        cursor.style.top = textElement.offsetTop + 'px';
+        cursor.style.left = textElement.offsetWidth + textElement.offsetLeft - 2 + 'px';
+        setTimeout(function() {
+            deleteText(cb);
+        }, 50); // Kecepatan penghapusan (dalam milidetik)
+    } else {
+        cb(); // Panggil fungsi callback setelah teks dihapus
+    }
+}
+
+// Fungsi untuk menjalankan animasi dan pengulangan
+function startTyping() {
+    typeWriter(textToType, 0, function() {
+        // Ketika animasi selesai, panggil fungsi startTyping kembali setelah jeda 2 detik
+        setTimeout(startTyping, 2000);
+    });
+}
+
+// Memulai animasi dan pengulangan
+startTyping();
+</script>
+
+</body>
+</html>

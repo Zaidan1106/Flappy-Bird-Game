@@ -24,14 +24,31 @@
 <body data-aos="fade-in" data-aos-easing="linear" data-aos-duration="1500">
 
     <div class="music rotating" onclick="togglePlayPause()" id="mucik">
-        <img src="img/musik.png" alt="">
+        <img src="img/musik.png" alt="" id="pos">
     </div>
     
     <div class="title" onmouseover="ubah()">
         <img src="img/logo2.png" alt="" id="zaidan">
     </div>
 
-    
+    <!-- Play start -->
+    <div class="welcome">
+        <div class="container-wc">
+            <div class="text-wc">
+                <img src="img/logo.png" alt="" class="img-wc">
+                <h1>Welcome GamerZ!</h1>
+                <div class="typed-text-container" style="display: flex; flex-direction: row; gap: .2rem; text-align: center; justify-content: center;">
+                    <small style="text-align: center;">To</small>
+                    <small style="margin-right: 1.2rem; text-align: center;" id="typed-text" class="typed-text"> </small>
+
+                    <div class="blinking-cursor"></div>
+                </div>
+                <button id="start" onclick="mucik()" onmouseover="stope()" >START</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Play end -->
     <div class="container">
         
         <!-- Luas Bangun Datar start -->
@@ -100,7 +117,7 @@
 
         
     </div>
-
+    
     <!-- modal start -->
     <!-- GForm -->
     <div class="gform">
@@ -150,6 +167,9 @@
         feather.replace();
     </script>
 
+     <!-- GSAP -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
 
     <!-- sound -->
     <audio id="keklik">
@@ -180,6 +200,12 @@
     <audio id="bnr">
         <source src="luas-bangun-datar/audio/bnr.mp3" type="" >
     </audio>
+
+    <audio id="pope" autoplay>
+        <source src="sound/bubble-pop.mp3" type="" >
+    </audio>
+
+    
 
     <script src="script.js"></script>
 </body>

@@ -17,6 +17,96 @@ body {
     position: relative;
 }
 
+/* Welcome start */
+.welcome { /*wah ternyata gini biar gada bolong bolong lagi, fullscreen coeg */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, rgb(85, 85, 85), rgba(0, 0, 0, 0.911));
+    flex-direction: column;
+}
+
+.welcome .container-wc {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: -10%;
+    transform: scale(0.1);
+    opacity: 0;
+    justify-content: center;
+}
+
+.welcome .container-wc .img-wc {
+    width: 10rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -20%;
+    left: -2rem;
+}
+
+.welcome .container-wc .text-wc {
+    text-align: center;
+    padding-left: 7rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+#start {
+    position: absolute;
+    cursor: pointer;
+    top: 120%;
+    left: 43%;
+    text-align: center;
+    border-radius: 1.3rem;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    transform: scale(.1);
+}
+/* Welcome end */
+
+/* typed text start */
+/* Animasi garis berkedip */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Gaya untuk elemen teks yang diketik */
+.typed-text-container {
+    position: relative;
+}
+
+/* Gaya untuk garis berkedip */
+.blinking-cursor {
+    position: absolute;
+    bottom: -3px;
+    right: -2px; /* Sesuaikan posisi agar berada di sebelah kanan huruf terakhir */
+    height: 1rem;
+    width: 2px;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+}
+
+/* Gaya untuk teks yang diketik */
+.typed-text {
+    display: inline-block;
+    vertical-align: top;
+}
+/* typed text end */
+
 .music {
     position: fixed;
     z-index: 200;
@@ -362,6 +452,65 @@ iframe,
     }
 }
 
+@media (max-width: 550px) {
+    /* Welcome start */
+    .welcome { /*wah ternyata gini biar gada bolong bolong lagi, fullscreen coeg */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999999;
+        font-size: .6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .welcome .container-wc {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        top: -10%;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    .welcome .container-wc .img-wc {
+        width: 7rem;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: -20%;
+        left: -1rem;
+    }
+
+    .welcome .container-wc .text-wc {
+        text-align: center;
+        padding-left: 6rem;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+    }
+
+    #start {
+        position: absolute;
+        cursor: pointer;
+        top: 130%;
+        left: 43%;
+        text-align: center;
+        border-radius: 1.3rem;
+        font-weight: bold;
+        background-color: white;
+        border: none;
+        padding: 1rem;
+        font-size: .7rem;
+    }
+}
+
 
 /* Mobile */
 @media (max-width: 450px) {
@@ -426,7 +575,7 @@ iframe,
 }
 
 /* Kecil bat cog */
-@media (max-width: 355px) {
+@media (max-width: 361px) {
     .title img {
         width: 18rem;
     }
@@ -469,5 +618,62 @@ iframe,
         border-radius: 50%;
         padding: .5rem;
         border: .2rem solid black;
+    }
+
+     /* Welcome start */
+     .welcome { /*wah ternyata gini biar gada bolong bolong lagi, fullscreen coeg */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999999;
+        font-size: .6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .welcome .container-wc {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        top: -10%;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    .welcome .container-wc .img-wc {
+        width: 6rem;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: -15%;
+        left: -.5rem;
+    }
+
+    .welcome .container-wc .text-wc {
+        text-align: center;
+        padding-left: 5rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+    }
+
+    #start {
+        position: absolute;
+        cursor: pointer;
+        top: 130%;
+        left: 43%;
+        text-align: center;
+        border-radius: 1.3rem;
+        font-weight: bold;
+        background-color: white;
+        border: none;
+        padding: 1rem;
+        font-size: .7rem;
     }
 }
