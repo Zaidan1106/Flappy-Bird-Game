@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, rgb(85, 85, 85), rgba(0, 0, 0, 0.911));
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.875), rgb(0, 0, 0));
     flex-direction: column;
 }
 
@@ -436,6 +436,16 @@ iframe,
 }
 /* Modal end */
 
+.more {
+    transition: .3s;
+    border: .35rem solid white;
+}
+
+.more:hover {
+    box-shadow: .3rem .3rem .3rem white;
+    transition: .3s;
+    border: .35rem solid yellow;
+} 
 
 
 

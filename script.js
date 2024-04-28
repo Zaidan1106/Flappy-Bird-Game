@@ -6,6 +6,7 @@ var targetAngka = "tebakangka/index.html"; // Simpan URL tujuan di sini
 var targetXox = "TIC-TAC-TOE/index.html"; // Simpan URL tujuan di sini
 var targetNext = "https://forms.gle/VE7CyvsRi7jDNi7p8"; // Simpan URL tujuan di sini
 let saweria = "https://saweria.co/Zaidan1106"
+let tmore = 'https://zaidan1106.github.io/'
 let klikk = document.getElementById('klik')
 
 
@@ -73,6 +74,15 @@ function startTyping() {
 startTyping();
 // type text end**********************************
 
+function more () {
+    const klikin = document.getElementById('keklik');
+    klikin.play();
+
+    // When the audio finishes playing, navigate to the target URL
+    klikin.onended = function() {
+        window.location.href = tmore;
+    };
+}
 
 function ubah() {
     ganti = document.getElementById('i')
