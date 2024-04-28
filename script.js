@@ -211,7 +211,7 @@ function mulaiAnimasi() {
                 wc.style["box-shadow"] = '0rem .4rem 1rem orange';
                 
                 wci.style.transition = 'box-shadow .5s ease-in-out';
-                wci.style["box-shadow"] = '-.6rem .5rem .9rem black';
+                wci.style["box-shadow"] = '-.6rem .5rem .9rem orange';
                 
                 wcs.style.transition = 'box-shadow .5s ease-in-out';
                 wcs.style["box-shadow"] = '3px 3px 5px 0px red, -3px 3px 5px 0px blue';
@@ -241,7 +241,7 @@ function mulaiAnimasi() {
                         flickerTimeline = gsap.timeline({ repeat: -1 });
                         flickerTimeline
                             .to("#start", { duration: 1, color: "white", backgroundColor: "rgba(0, 0, 0, 0.8)" })
-                            .to("#start", { duration: 1, color: "black", backgroundColor: "white" });
+                            .to("#start", { duration: 1, color: "white", backgroundColor: "rgba(0, 0, 0, .8)" });
                     }
 
                 }, 1000);
@@ -256,7 +256,7 @@ mulaiAnimasi();
 // Fungsi untuk menghentikan animasi
 function stope() {
     let start = document.querySelector('#start');
-    start.style.backgroundColor = 'rgba(0, 0, 0, 80%)';
+    start.style.backgroundColor = 'black';
     start.style.color = 'white';
 
     // Menonaktifkan animasi
@@ -330,8 +330,8 @@ document.querySelector('#start').addEventListener("mouseleave", function() {
 // Fungsi untuk memulai kembali animasi wiggle dan flicker
 function mulaiWiggleDanFlicker() {
     let start = document.querySelector('#start');
-    start.style.backgroundColor = 'white)';
-    start.style.color = 'black';
+    start.style.backgroundColor = 'rgba(26, 26, 26, 0.579)';
+    start.style.color = 'white';
     start.style.transform = 'scale(1)'
      // Memulai animasi wiggle jika belum ada
      if (!wiggleAnimation || wiggleAnimation.isActive()) {
@@ -353,7 +353,7 @@ function mulaiWiggleDanFlicker() {
         flickerTimeline = gsap.timeline({ repeat: -1 });
         flickerTimeline
             .to("#start", { duration: 1.5, color: "white", backgroundColor: "rgba(0, 0, 0, 0.8)" })
-            .to("#start", { duration: 1.5, color: "black", backgroundColor: "white" });
+            .to("#start", { duration: 1.5, color: "white", backgroundColor: "rgba(26, 26, 26, 0.579)" });
     }
 }
 
