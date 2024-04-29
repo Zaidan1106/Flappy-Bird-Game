@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.875), rgb(0, 0, 0));
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.57), rgb(0, 0, 0));
     flex-direction: column;
 }
 
@@ -76,6 +76,62 @@ body {
     color: white;
 }
 /* Welcome end */
+
+/* Badge start */
+.badge {
+    background-color: white;    
+    margin-top: 1.3rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    border: .2rem solid black;
+    transition: .3s;
+}
+
+.badge:hover {
+    box-shadow: .2rem .2rem .2rem black;
+    transition: .3s;
+}
+
+.badge h1 {
+    font-size: 1rem;
+    color: white;
+    text-shadow: 
+            -.1rem -.1rem .1rem #000,  
+            .1rem -.1rem .1rem #000,  
+           -.1rem .1rem .1rem #000,  
+           .1rem .1rem .1rem #000;
+    margin-bottom: .5rem;
+}
+
+.badge .content-bd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 
+    -.07rem -.07rem .07rem #000,  
+    .07rem -.07rem .07rem #000,  
+   -.07rem .07rem .07rem #000,  
+   .07rem .07rem .07rem #000;
+   gap: .3rem;
+}
+
+.badge .content-bd .w-bd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .7rem;
+}
+
+.badge .content-bd .w-bd img {
+    width: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0rem 0rem 0rem .15rem black;
+}
+/* Badge end*/
 
 /* typed text start */
 /* Animasi garis berkedip */
@@ -161,6 +217,7 @@ body {
 .title img {
     width: 30rem;
     padding: 2rem 0;
+    padding-bottom: 1rem;
 }
 
 .title h1 {
@@ -288,7 +345,7 @@ a {
 
 
 .back {
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     background-color: bisque;
     border: .2rem solid white;
     box-shadow: .2rem .2rem .2rem black;

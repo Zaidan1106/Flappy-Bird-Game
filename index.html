@@ -54,11 +54,13 @@
 
     </div>
     <!-- Play end -->
+    
     <div class="container">
         
         <!-- Luas Bangun Datar start -->
         <div class="game-c" onmouseover="sound()" onclick="klik0(event)">
             <a href="#" class="game">
+                <img src="img/tools.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/RUMUS BANGUN DATAR.png" alt="">
                 <div class="latest1">
                     <h1>TOOLS / ALAT</h1>
@@ -70,6 +72,7 @@
         <!-- Punch A Brick Wall start -->
         <div class="game-c" onmouseover="sound()" onclick="klik1(event)">
             <a href="#" class="game" id="gameLink">
+                <img src="img/hart.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/PUNCH A BRICK WALL.png" alt="">
                 <div class="latest">
                     <h1>LATEST GAME!</h1>
@@ -81,6 +84,7 @@
         <!-- tutingtas start -->
         <div class="game-c" onmouseover="sound()" onclick="klik2(event)">
             <a href="#" class="game">
+                <img src="img/izi.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="img/tutingtas.png" alt="">
             </a>
         </div>
@@ -90,6 +94,7 @@
         <!-- tebakangka start -->
         <div class="game-c" onmouseover="sound()" onclick="klik3(event)">
             <a href="#" class="game">
+                <img src="img/izi.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/TEBAK ANGKA.png" alt="">
             </a>
         </div>
@@ -98,6 +103,7 @@
          <!-- tic tac toe start -->
          <div class="game-c" onmouseover="sound()" onclick="klik4(event)">
             <a href="#" class="game">
+                <img src="img/izi.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/TIC TAC TOE.png" alt="">
             </a>
         </div>
@@ -107,6 +113,7 @@
         <!-- Zlappy start -->
         <div class="game-c" onmouseover="sound()" onclick="klik5(event)">
             <a href="#" class="game">
+                <img src="img/hart.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/Flappy Bird.png" alt="">
             </a>
         </div>
@@ -115,6 +122,7 @@
         <!-- next game start -->
         <div class="game-c" onmouseover="sound()" onclick="muncul()">
             <a href="#" class="game">
+                <img src="img/nanya.png" alt="" style="position: absolute; width: 1.5rem; border-radius: 50%; box-shadow: 0rem 0rem 0rem .15rem black; top: .5rem; right: .5rem;">
                 <img src="Logos/Next Game.png" alt="">
             </a>
         </div>
@@ -122,6 +130,32 @@
 
         
     </div>
+
+     <!-- badge start -->
+     <div class="badge">
+        <div class="title-bd">
+            <h1>Badge :</h1>
+        </div>
+        <div class="content-bd">
+            <div class="w-bd">
+                <img src="img/izi.png" alt="">
+                <p style="color: greenyellow; font-weight: bold;">Badge game simple.</p>
+            </div>
+            <div class="w-bd">
+                <img src="img/tools.png" alt="">
+                <p style="color: yellow; font-weight: bold;">Badge tools(bukan game ).</p>
+            </div>
+            <div class="w-bd">
+                <img src="img/hart.png" alt="">
+                <p style="color: rgb(255, 0, 0); font-weight: bold;">Badge game lumayan kompleks.</p>
+            </div>
+            <div class="w-bd">
+                <img src="img/nanya.png" alt="">
+                <p style="color: rgb(57, 154, 233); font-weight: bold;">Badge pesan ke developer.</p>
+            </div>
+        </div>
+    </div>
+    <!-- badge end -->
     
     <!-- modal start -->
     <!-- GForm -->
@@ -138,7 +172,7 @@
     </div>    
     <!-- modal end -->
 
-    <div class="back" onclick="sawer()">
+    <div class="back" onclick="sawer()" onmouseover="son()">
         <a href="#" target="_self" style="display: flex; justify-content: center; align-items: center;">
             <img src="Logos/saweria.svg" alt="" style="width: 2.5rem;">
             <h4 style="color: white; text-shadow: 
@@ -161,7 +195,7 @@
         </div>
     </footer>
 
-    <a onclick="more()" href="#" class="more" style="cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: radial-gradient(circle, white, greenyellow); font-size: .5rem; text-shadow: 
+    <a onclick="more()" onmouseover="son()" href="#" class="more" style="cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: radial-gradient(circle, white, greenyellow); font-size: .5rem; text-shadow: 
     -.1rem -.1rem .1rem rgb(92, 60, 1),  
     .1rem -.1rem .1rem rgb(92, 60, 1),  
    -.1rem .1rem .1rem rgb(92, 60, 1),  

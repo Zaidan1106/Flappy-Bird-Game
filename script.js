@@ -164,6 +164,11 @@ function klik6() {
     };
 }
 
+function son () {
+    let gta = document.getElementById('mouseover')
+    gta.play()
+}
+
 function sawer() {
     const klikin = document.getElementById('keklik');
     klikin.play();
@@ -293,6 +298,8 @@ function isAnimasiBerjalan() {
 }
 
 function mucik() {
+    let geo = document.getElementById('keklik')
+    geo.play()
     audio.play()
     pop.play();
     gsap.to(".container-wc", { 
