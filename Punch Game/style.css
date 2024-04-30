@@ -144,10 +144,6 @@ body {
     font-size: 1.5rem;
 }
 
-#home-btn {
-    cursor: pointer;
-}
-
 .sekor {
     background-color: rgb(0, 0, 0);
     border-radius: 2rem;
@@ -206,6 +202,7 @@ button:hover, #reset:hover {
     height: 6rem;
     border: none;
     transition: .3s;
+    cursor: pointer;
 }   
 
 .home:hover {
