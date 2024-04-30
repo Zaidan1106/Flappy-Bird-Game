@@ -77,6 +77,53 @@ body {
 }
 /* Welcome end */
 
+/* gapp satrt */
+.gapp::after {
+    content: '';
+    display: block;
+    width: 25rem;
+    left: 1rem;
+    right: 1rem;
+    height: .2rem;
+    background-image: radial-gradient(circle, red, blue);
+    z-index: 1;
+    position: absolute;
+    bottom: 37rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+}
+
+.limit {
+    position: relative;
+    z-index: 1;
+}
+
+.limit .circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, blue, red);
+    position: absolute;
+    left: -12.95rem;
+    top: -.07rem;
+    z-index: 9999999999999;
+}
+
+.limit .circle1 {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, blue, red);
+    position: absolute;
+    right: -12.95rem;
+    top: -.07rem;
+    z-index: 9999999999999;
+}
+
+/* gapp end */
+
+
 /* Badge start */
 .badge {
     background-color: white;    
@@ -577,6 +624,38 @@ iframe,
         padding: 1rem;
         font-size: .7rem;
     }
+
+    .gapp::after {
+        width: 20rem;
+        bottom: 38rem;
+    }
+
+    .limit {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .limit .circle {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-image: radial-gradient(circle, blue, red);
+        position: absolute;
+        left: -10.8rem;
+        top: -1.05rem;
+        z-index: 9999999999999;
+    }
+    
+    .limit .circle1 {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-image: radial-gradient(circle, blue, red);
+        position: absolute;
+        right: -10.8rem;
+        top: -1.05rem;
+        z-index: 9999999999999;
+    }
 }
 
 
@@ -639,6 +718,13 @@ iframe,
         border-radius: 50%;
         padding: .5rem;
         border: .2rem solid black;
+    }
+}
+
+@media (max-width: 400px) {
+    .gapp::after {
+        width: 20rem;
+        bottom: 39.05rem;
     }
 }
 
